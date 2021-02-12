@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
-import Header from './components/Header';
+import Header from '../Header';
 
 describe('App component', () => {
 	let container
+    let text="test"
 
   	beforeEach(() => {
 		  container = shallow(
-		  	<App/>
+		  	<Header
+                text={text}
+            />
 		)
 	})
 
@@ -16,7 +18,7 @@ describe('App component', () => {
 		expect(container.find('div').length).toEqual(1);
   	});
 
-  	it("should render the Timer Component", () => {
-    	expect(container.containsMatchingElement(<Header />)).toEqual(true)
+  	it("should render text in <h1>", () => {
+    	expect(container.find('h1').text()).toEqual(text)
   	})
 });
