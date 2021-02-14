@@ -3,6 +3,7 @@ import { shallow } from "enzyme";
 import App from "./App";
 import Header from "./components/Header";
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 describe("App component", () => {
   let container;
@@ -21,5 +22,9 @@ describe("App component", () => {
 
   it("should render the TodoForm Component", () => {
     expect(container.containsMatchingElement(<TodoForm />)).toEqual(true);
+  });
+
+  it("should render the TodoForm Component", () => {
+    expect(container.containsMatchingElement(<TodoList />)).toEqual(true);
   });
 });
