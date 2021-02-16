@@ -14,11 +14,7 @@ describe("Todo component", () => {
 
   beforeEach(() => {
     container = shallow(
-      <Todo
-        todo={todo}
-        removeTodo={mockFunction}
-        toggleComplete={mockFunction}
-      />
+      <Todo todo={todo} removeTodo={mockFunction} toggleDone={mockFunction} />
     );
   });
 
