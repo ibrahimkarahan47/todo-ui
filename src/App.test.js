@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+
 import App from "./App";
 import Header from "./components/Header";
 import TodoForm from "./components/TodoForm";
@@ -7,7 +8,6 @@ import TodoList from "./components/TodoList";
 
 describe("App component", () => {
   let container;
-
   beforeEach(() => {
     container = shallow(<App />);
   });
