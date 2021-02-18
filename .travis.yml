@@ -5,8 +5,12 @@ node_js:
 
 dist: xenial
 
+service: docker
+
 script:
   - echo 'Build Starts!'
   - echo 'Running Test!'
   - npm test
   - npm run build
+  - docker build -t modanisa-todo-frontend .
+  - docker images
