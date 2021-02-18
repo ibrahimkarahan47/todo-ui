@@ -19,7 +19,7 @@ describe("TodoList component", () => {
       <TodoList
         todos={todos}
         removeTodo={mockFunction}
-        toggleComplete={mockFunction}
+        toggleDone={mockFunction}
       />
     );
   });
